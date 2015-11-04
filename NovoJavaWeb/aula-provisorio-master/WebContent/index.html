@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+  	<script src="resources/js/jquery-1.11.3.js"></script>
+  	<script src="resources/js/index.html"></script>
+</head>
+<body>
+	<script>
+		function animal() {
+			var data = new FormData();
+			$('input').each(function(i, element) {
+				var attr = $('input')[i]; 
+				data.append(attr.name, attr.value);
+			});
+			
+			ajax(
+				'http://localhost:8080/aulajavaweb/rest/animal',
+				'GET',
+				undefined,
+				undefined,
+				function(msg) {
+					alert(msg);
+				},
+				function(jqXHR, status) {
+					alert('Falha' + status);
+				}
+			);
+		};
+	</script>
+	
+    id: <input type="text" name="id"/><br/>
+    name: <input type="text" name="name"/><br/>
+      
+    <button onclick="animal()">Gravar</button>
+</body>
+</html>

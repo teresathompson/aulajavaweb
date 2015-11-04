@@ -1,0 +1,15 @@
+<script>
+(function especie() {
+	$.ajax({
+		url: 'http://localhost:8080/aulajavaweb/rest/especie',  
+		method: 'GET',
+		success: success,
+		fail: fail
+	});
+})();
+</script>
+
+id: <input name="id"/>
+name: <input name="name"/>
+
+<button onclick="animal()"> Animal </button>

@@ -1,0 +1,28 @@
+
+
+body{
+
+	background-color: #FFF222;
+	
+	
+}
+
+.navbar{
+	background-color:#800000;
+	text-color:#FFFFCC;
+	
+}
+
+table.navbar{
+	padding:10px;
+	
+}
+
+
+.principal{
+	
+}
+
+h1.principal{
+	font-family: 'Sigmar One', cursive;
+}
